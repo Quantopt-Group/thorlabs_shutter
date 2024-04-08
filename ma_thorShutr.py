@@ -27,13 +27,13 @@ except visa.VisaIOError:
     print('No connection to: ' + str(my_instrument))
 
 my_instrument.query('ens?')
-shut_state = my_instrument.read()
+shut_state = my_instrument.read()  # warning says read is not available but it does not work without it
 print(shut_state)
 
 my_instrument.query('ens')
 # time.sleep(1)
 my_instrument.query('ens?')
-shut_state = my_instrument.read()
+shut_state = my_instrument.read()  # warning says read is not available but it does not work without it
 print(shut_state)
 
 print("es el final")
